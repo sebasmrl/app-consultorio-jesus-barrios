@@ -1,0 +1,61 @@
+<nav class="w-full overflow-hidden h-auto md:h-28 bg-purple-800 z-50" style="background-color: #553c9a">
+  <div
+    class="
+      flex flex-wrap
+      justify-center
+      items-center
+      w-full
+      h-full
+      z-50
+      shadow-lg
+      overflow-hidden
+      text-white
+      md:justify-between
+    "
+  >
+    <div class="flex flex-wrap h-full py-3 overflow-hidden justify-center items-center gap-4">
+      <div class="h-full w-auto">
+        <img class="object-contain h-full" src="images/LOGO-CONSULTORIO-VIRTUAL-TRABAJO-SOCIAL.png" alt="Logo" />
+      </div>
+      <div class="h-full hidden lg:h-14 lg:block xl:h-full">
+        <img
+          class="object-cover h-full"
+          src="images/BANNER-CONSULTORIO-VIRTUAL-TRABAJO-SOCIAL (1).png"
+          alt="Hojas"
+        />
+      </div>
+    </div>
+    <div class="flex items-center gap-5 h-full">
+      <div id="contentLogged" class="flex md:flex-col gap-1">
+        <button
+          id="openButton"
+            class="flex items-center justify-between gap-2 rounded-full text-red-50 p-2 outline-none focus:outline-none"
+        >
+          Iniciar Sesión
+          <i class="bg-purple-500 bg-opacity-25 rounded-full p-1 material-icons-round">person</i>
+        </button>
+        <a
+          href="./registro.html"
+          class="flex items-center justify-between gap-2 rounded-full text-red-50 p-2 outline-none focus:outline-none"
+        >
+          Registrarse
+          <i class="bg-purple-500 bg-opacity-25 rounded-full p-1 material-icons-round">person_add</i>
+        </a>
+      </div>
+      <div class="h-full px-2.5 bg-purple-900 bg-opacity-25 hidden md:block">
+        <img class="object-contain h-full py-2" src="images/logo.png" alt="Curn" />
+      </div>
+    </div>
+  </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+
+    try{
+      document.getElementById("openButton").addEventListener('click', (e)=>{
+      window.location.replace(`${ location.origin}/access/login.html`)
+    })
+    }catch (error) {
+      console.log(error)
+    }
+</script>

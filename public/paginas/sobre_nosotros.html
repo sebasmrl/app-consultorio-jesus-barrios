@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultorio Virtual</title>
+    <!-- Links -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="../images/icono.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="../js/api.js"></script>
+
+    <script defer src="../js/includeHtml.js"></script>
+    <script defer src="../components/loggedNavbar/loggedNavbar.js"></script>
+  </head>
+
+  <body class="h-screen w-screen overflow-hidden">
+    <div class="flex flex-col w-full h-full overflow-hidden">
+      <!-- Navbar -->
+      <include src="../components/loggedNavbar/loggedNavbar.html">Cargando Navbar...</include>
+
+      <!-- Info -->
+      <div class="bg-gray-50 w-full flex flex-col gap-10 flex-grow p-5 md:p-12 overflow-y-auto text-xl text-justify">
+        <h1 class="text-4xl text-gray-800">¿Quienes Somos?</h1>
+        <p>
+          El <b>Consultorio Virtual de Trabajo Social</b> de la CURN es un espacio que permite la interacción con los
+          estudiantes y visitantes. Es una estrategia de atención individual, familiar y social, pensada con un conjunto
+          de actores, herramientas, y recursos que se unen con el propósito de realizar las consultas sociales,
+          solicitadas por las personas interesadas de la Corporación Universitaria Rafael Núñez – CURN.
+        </p>
+        <p class="font-medium text-purple-900">
+          ¡Les damos la bienvenida a este espacio virtual y esperamos que sea de gran apoyo!
+        </p>
+
+        <!-- Objetivos -->
+        <div class="flex gap-5 rounded-lg shadow-xl bg-white px-3 py-5">
+          <img src="../images/bandera.png" class="w-12 h-12 md:w-28 md:h-28" />
+          <div>
+            <p class="text-2xl font-medium text-gray-800">Objetivos</p>
+            <ul class="mt-2 list-disc list-inside">
+              <li>
+                Proporcionar a los estudiantes y familias de la CURN el acceso abierto y sencillo a los procesos de
+                consultas virtuales donde se encuentre.
+              </li>
+              <li>
+                Suministrar a los estudiantes servicios de apoyo personal y de emprendimiento para el mejoramiento de su
+                calidad de vida.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mision -->
+        <div class="flex gap-5 rounded-lg shadow-xl bg-white px-3 py-5">
+          <img src="../images/idea.png" class="w-12 h-12 md:w-28 md:h-28" />
+          <div>
+            <p class="text-2xl font-medium text-gray-800">Misión</p>
+            <p class="mt-2">
+              El <b>Consultorio Virtual de Trabajo Social</b> busca proporcionar las tecnologías más innovadoras a
+              medida de las necesidades personales, familiares y vocacionales de los estudiantes del programa, con el
+              objetivo de incrementar su permanencia, retención, competitividad, productividad y graduación.
+            </p>
+          </div>
+        </div>
+
+        <!-- Vision -->
+        <div class="flex gap-5 rounded-lg shadow-xl bg-white px-3 py-5">
+          <img src="../images/vision.png" class="w-12 h-12 md:w-28 md:h-28 filter contrast-75 saturate-200" />
+          <div>
+            <p class="text-2xl font-medium text-gray-800">Visión</p>
+            <p class="mt-2">
+              Estar comprometidos con los problemas de los estudiantes del programa de Trabajo Social y sus respectivas
+              familias, de forma transparente y eficaz para convertirnos en un servicio social de confianza, que camina
+              con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de ayuda psicosocial,
+              familiar, vocacional y de tecnologías innovadoras.
+            </p>
+          </div>
+        </div>
+
+        <h1 class="text-3xl text-gray-800">Servicios de Apoyo</h1>
+        <p class="-mt-8">
+          Desde el programa de Trabajo Social de la Corporación Universitaria Rafael Núñez se crea la propuesta de
+          innovación: “<b>Consultorio virtual de Trabajo Social</b>”, ofreciendo desde un espacio virtual, a través de
+          interacción con la población estudiantil de la CURN y a sus respectivas familias, los siguientes servicios:
+        </p>
+
+        <!-- Lista 1 -->
+        <p class="font-medium text-gray-700">ÁREA DE FORTALECIMIENTO PERSONAL</p>
+        <ol class="list-decimal -mt-8 ml-8">
+          <li class="mb-4">
+            <span class="font-medium text-gray-600"> Orientación Individual Sistémica </span>
+            <br />
+            En el desarrollo de un individuo, la familia se convierte en el grupo más importante para alcanzar desde el
+            desarrollo psicológico, el aprendizaje de las interacciones emocionales y el mantenimiento de la autoestima.
+            Desde este ámbito se reconoce la importancia de la familia como núcleo de apoyo al estudiante y en este
+            sentido se establecen las estrategias de fortalecimiento familiar desde el consultorio.
+          </li>
+
+          <li class="my-4">
+            <span class="font-medium text-gray-600"> Orientación Familiar Sistémica </span>
+            <br />
+
+            Se ofrece al estudiante desde este espacio la posibilidad de recibir orientación personal en temáticas que
+            quiera conocer o sobre problemáticas que requiera resolver en su vida académica o familiar.
+          </li>
+
+          <li class="mt-4">
+            <span class="font-medium text-gray-600"> Orientación De Pareja </span>
+            <br />
+            La relación de pareja es de alguna forma la más importante relación para el crecimiento de cada uno de sus
+            miembros. Desde este espacio se busca apoyar a los individuos a desarrollar habilidades en las relaciones de
+            pareja, ya sea para comunicarse claramente, resolver problemas y/o tener una proyección interna,
+            independiente de su familia de origen.
+          </li>
+          <li class="my-4">
+            <span class="font-medium text-gray-600"> Área de fortalecimiento comunitario </span>
+            <br />
+            Se pretende desde esta  área implementar mecanismos comunitarios de apoyo, activar las redes sociales como 
+            los grupos de apoyo a mujeres y hombres, los grupos de diálogo, educación y sensibilización de la comunidad.
+          </li>
+          <li class="my-4">
+            <span class="font-medium text-gray-600"> Área de apoyo sociepedagogico </span>
+            <br />
+            Bajo una perspectiva integral que contemple los diferentes ámbitos de la vida, se apuesta desde un enfoque 
+            incluyente brindar asesorías a estudiantes y familias en la articulación de los procesos de retención y permanencia 
+            estudiantil desde la CURN y con usuarios externos que lo requieran.
+          </li>
+        </ol>
+
+        <!-- Lista 2 -->
+        <p class="font-medium text-gray-700">ÁREA DE EMPRENDIMIENTO E INNOVACIÓN</p>
+        <p class="-mt-8">
+          Se pretende apoyar a estudiantes y visitantes en el reconocimiento de sus potencialidades y habilidades para
+          realizar la mejor elección en sus proyectos personales y académicos.
+        </p>
+        <ol class="list-decimal -mt-4 ml-8 font-medium text-gray-600 text-left">
+          <li class="mb-4">Orientación vocacional individual.</li>
+
+          <li class="my-4">Talleres de orientación vocacional.</li>
+
+          <li class="mt-4">Talleres y asesoría dirigidos a familia.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

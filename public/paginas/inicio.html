@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="ConsultorioVirtual" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultorio Virtual</title>
+    <!-- Links -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="../images/icono.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="../js/api.js"></script>
+    <script src="../js/inicio.js"></script>
+
+    <script defer src="../js/includeHtml.js"></script>
+    <script defer src="../components/loggedNavbar/loggedNavbar.js"></script>
+  </head>
+
+  <body class="relative h-screen w-screen">
+    <!-- Navbar -->
+    <include src="../components/loggedNavbar/loggedNavbar.html">Cargando Navbar...</include>
+
+    <div class="flex flex-col w-full p-5 pb-28 md:p-12 text-gray-800">
+      <h1 class="text-3xl" id="greeting">Bienvenido,</h1>
+      <include src="../components/options.html">Cargando Opciones</include>
+    </div>
+
+    <div class="flex items-center gap-2 fixed bottom-5 right-5 md:bottom-10 md:right-10">
+      <p class="text-2xl text-gray-600">Preguntas Frecuentes</p>
+      <a
+        href="./preguntas_frecuentes.html"
+        class="p-3 bg-gray-300 text-gray-600 rounded-full shadow-lg material-icons-round"
+        style="font-size: 40px"
+        >question_mark</a
+      >
+    </div>
+  </body>
+</html>

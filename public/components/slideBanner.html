@@ -1,0 +1,44 @@
+<div class="swiper w-full" style="height: calc(100vh - 224px)">
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <img src="images/carusel/1.jpg" class="object-contain h-full w-full absolute z-10" />
+      <img src="images/carusel/1.jpg" style="filter: blur(5px)" class="object-cover h-full w-full" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/carusel/2.jpg" class="object-contain h-full w-full absolute z-10" />
+      <img src="images/carusel/2.jpg" style="filter: blur(5px)" class="object-cover h-full w-full" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/carusel/3.jpg" class="object-contain h-full w-full absolute z-10" />
+      <img src="images/carusel/3.jpg" style="filter: blur(5px)" class="object-cover h-full w-full" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/carusel/4.jpg" class="object-contain h-full w-full absolute z-10" />
+      <img src="images/carusel/4.jpg" style="filter: blur(5px)" class="object-cover h-full w-full" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/carusel/5.jpg" class="object-contain h-full w-full absolute z-10" />
+      <img src="images/carusel/5.jpg" style="filter: blur(5px)" class="object-cover h-full w-full" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/carusel/6.jpg" class="object-contain h-full w-full absolute z-10" />
+      <img src="images/carusel/6.jpg" style="filter: blur(5px)" class="object-cover h-full w-full" />
+    </div>
+  </div>
+  <div class="absolute swiper-pagination"></div>
+</div>
+<script defer type="module">
+  import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    speed: 800,
+    autoplay: {
+      delay: 3500,
+    },
+  });
+</script>

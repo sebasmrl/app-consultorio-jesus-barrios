@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="ConsultorioVirtual" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultorio Virtual</title>
+    <!-- Links -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="../images/icono.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="../js/api.js"></script>
+    <script defer src="../js/juegos.js"></script>
+
+    <script defer src="../js/includeHtml.js"></script>
+    <script defer src="../components/loggedNavbar/loggedNavbar.js"></script>
+  </head>
+  <body class="h-screen w-screen overflow-hidden">
+    <div class="flex flex-col w-full h-full overflow-hidden">
+      <!-- Navbar -->
+      <include src="../components/loggedNavbar/loggedNavbar.html">Cargando Navbar...</include>
+
+      <!-- Juegos -->
+      <div id="juegosItems" class="w-full flex flex-col gap-10 flex-grow p-5 md:p-12 overflow-hidden overflow-y-auto">
+        <h1 class="text-4xl text-gray-800">Juegos</h1>
+      </div>
+    </div>
+  </body>
+</html>

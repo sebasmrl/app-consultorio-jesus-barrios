@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html ng-app="ConsultorioVirtual" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultorio Virtual</title>
+    <!-- Links -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="icon" type="image/png" href="images/icono.png" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+    <script defer src="js/includeHtml.js"></script>
+    <script src="components/navbar/navbar.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-principal">
+      <include src="components/navbar/navbar.html">Cargando NavBar...</include>
+    </div>
+
+    <!-- Slideshow -->
+    <include src="components/slideBanner.html">Cargando Banner</include>
+
+    <!-- Cards -->
+    <div
+      class="
+        bg-gradient-to-tl
+        from-gray-700
+        via-purple-900
+        to-blue-900
+        flex flex-col
+        gap-20
+        justify-between
+        w-full
+        p-5
+        md:p-12
+        items-start
+      "
+    >
+      <h1 class="text-4xl text-white">Nosotros</h1>
+      <div class="flex w-full h-auto flex-grow flex-col items-center gap-10 md:flex-row">
+        <!-- Mision -->
+        <div
+          class="
+            flex flex-col
+            justify-between
+            items-center
+            w-full
+            md:w-1/3
+            h-auto
+            p-5
+            gap-3
+            rounded-md
+            shadow-md
+            border border-gray-400
+            transform
+            transition-all
+            duration-300
+            hover:shadow-lg hover:scale-105
+          "
+        >
+          <h1 class="text-3xl text-white font-medium">Misión</h1>
+          <div class="w-full h-40">
+            <img class="object-contain w-full h-full" src="images/idea.png" />
+          </div>
+          <p class="text-justify text-xl text-white">
+            El Consultorio Virtual de Trabajo Social busca proporcionar las tecnologías más innovadoras a medida de las
+            necesidades personales, familiares y vocacionales de los estudiantes del programa, con el objetivo de
+            incrementar su permanencia, retención, competitividad, productividad y graduación.
+          </p>
+        </div>
+
+        <!-- Vision -->
+        <div
+          class="
+            flex flex-col flex flex-col
+            justify-between
+            items-center
+            w-full
+            md:w-1/3
+            h-auto
+            p-5
+            gap-3
+            rounded-md
+            shadow-md
+            border border-gray-400
+            transform
+            transition-all
+            duration-300
+            hover:shadow-lg hover:scale-105
+          "
+        >
+          <h1 class="text-3xl text-white font-medium">Visión</h1>
+          <div class="w-full h-40">
+            <img class="object-contain w-full h-full" src="images/ver.png" />
+          </div>
+          <p class="text-justify text-xl text-white">
+            Estar comprometidos con los problemas de los estudiantes del programa de Trabajo Social y sus respectivas
+            familias, de forma transparente y eficaz para convertirnos en un servicio social de confianza, que camina
+            con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de ayuda psicosocial,
+            familiar, vocacional y de tecnologías innovadoras.
+          </p>
+        </div>
+
+        <!-- Objetivos -->
+        <div
+          class="
+            flex flex-col
+            justify-between
+            items-center
+            w-full
+            md:w-1/3
+            h-auto
+            p-5
+            gap-3
+            rounded-md
+            shadow-md
+            border border-gray-400
+            transform
+            transition-all
+            duration-300
+            hover:shadow-lg hover:scale-105
+          "
+        >
+          <h1 class="text-3xl text-white font-medium">Objetivos</h1>
+          <div class="w-full h-40">
+            <img class="object-contain w-full h-full" src="images/vision.png" />
+          </div>
+          <p class="text-justify text-xl text-white">
+            - Proporcionar a los estudiantes y familias de la CURN el acceso abierto y sencillo a los procesos de
+            Consultas virtuales donde se encuentre.
+            <br />
+            - Suministrar a los estudiantes servicios de apoyo personal y de emprendimiento para mejoramiento de su
+            calidad de vida.
+          </p>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <!-- Seccion 3 -->
+    <div class="w-full h-auto flex flex-col p-5 md:p-12 mb-20 text-gray-700">
+      <h3 class="text-4xl text-gray-800">Conocenos</h3>
+      <h5 class="text-2xl mb-10">Tenemos mucho contenido para ti</h5>
+      <div class="flex justify-between items-center pb-4 mb-5 w-full">
+        <h2 class="flex-grow text-center text-2xl pb-2 mx-20 border-b border-gray-200">Entretenimiento</h2>
+        <h2 class="flex-grow text-center text-2xl pb-2 mx-20 border-b border-gray-200 hidden md:block">Consultoria</h2>
+      </div>
+      <div class="flex flex-col md:flex-row gap-5 justify-between">
+        <!-- Bloque 1 -->
+        <div class="flex-grow flex">
+          <!-- Fila 1 -->
+          <div class="flex w-full">
+            <!-- Columna 1 -->
+            <div class="flex flex-grow items-center gap-5 flex-col">
+              <!-- Item 1 -->
+              <button
+                onclick="sessionQuestion()"
+                class="flex flex-col bg-yellow-50 w-36 rounded-lg items-center gap-2 p-5"
+              >
+                <img src="images/boton-de-reproduccion.png" class="w-16 h-16" />
+                <p class="text-yellow-900 text-xl">Videos</p>
+              </button>
+              <!-- Item 2 -->
+              <button
+                onclick="sessionQuestion()"
+                class="flex flex-col bg-blue-50 w-36 rounded-lg items-center gap-2 p-5"
+              >
+                <img src="images/pizarra.png" class="w-16 h-16" />
+                <p class="text-blue-900 text-xl">Tutoriales</p>
+              </button>
+            </div>
+            <!-- Columna 2 -->
+            <div class="flex flex-grow gap-5 items-center flex-col">
+              <!-- Item 1 -->
+              <button
+                onclick="sessionQuestion()"
+                class="flex flex-col bg-pink-50 w-36 rounded-lg items-center gap-2 p-5"
+              >
+                <i class="material-icons-round text-pink-600 rounded-lg p-1" style="font-size: 3.25rem">extension</i>
+                <p class="text-pink-900 text-xl">Juegos</p>
+              </button>
+              <!-- Item 2 -->
+              <button
+                onclick="sessionQuestion()"
+                class="flex flex-col bg-green-50 w-36 rounded-lg items-center gap-2 p-5"
+              >
+                <img src="images/libros.png" class="w-16 h-16" />
+                <p class="text-green-900 text-xl">Libros</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloque 2 -->
+        <h2 class="flex-grow text-center text-2xl pb-2 mx-20 border-b border-gray-200 block md:hidden">Consultoria</h2>
+        <div class="flex-grow flex">
+          <!-- Fila 1 -->
+          <div class="flex w-full">
+            <!-- Columna 1 -->
+            <div class="flex items-center flex-grow gap-5 flex-col">
+              <!-- Item 1 -->
+              <button
+                onclick="sessionQuestion()"
+                class="
+                  flex flex-col
+                  border-4 border-blue-200 border-dotted
+                  bg-white
+                  w-36
+                  rounded-lg
+                  items-center
+                  gap-2
+                  p-5
+                "
+              >
+                <img src="images/chico.png" class="w-16 h-16" />
+                <p class="text-blue-900 text-xl">Indivudual</p>
+              </button>
+              <!-- Item 2 -->
+              <button
+                onclick="sessionQuestion()"
+                class="
+                  flex flex-col
+                  border-4 border-green-200 border-dotted
+                  bg-white
+                  w-36
+                  rounded-lg
+                  items-center
+                  gap-2
+                  p-5
+                "
+              >
+                <img src="images/familia.png" class="w-16 h-16" />
+                <p class="text-green-900 text-xl">Familiar</p>
+              </button>
+            </div>
+            <!-- Columna 2 -->
+            <div class="flex items-center flex-grow gap-5 flex-col">
+              <!-- Item 1 -->
+              <button
+                onclick="sessionQuestion()"
+                class="
+                  flex flex-col
+                  border-4 border-purple-200 border-dotted
+                  bg-white
+                  w-36
+                  rounded-lg
+                  items-center
+                  gap-2
+                  p-5
+                "
+              >
+                <img src="images/pareja.png" class="w-16 h-16" />
+                <p class="text-purple-900 text-xl">Pareja</p>
+              </button>
+              <!-- Item 2 -->
+              <button
+                onclick="sessionQuestion()"
+                class="
+                  flex flex-col
+                  border-4 border-gray-300 border-dotted
+                  bg-white
+                  w-36
+                  rounded-lg
+                  items-center
+                  gap-2
+                  p-5
+                "
+              >
+                <img src="images/red.png" class="w-16 h-16" />
+                <p class="text-gray-800 text-xl">Grupal</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foot -->
+    <include src="./components/footer.html">Cargando Footer...</include>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+
+window.addEventListener("DOMContentLoaded", async (e) => {
+
+  console.log("Holaaaa papus")
+
+    const token = window.localStorage.getItem("x-token");
+    const $contentLogged = document.getElementById("contentLogged");
+    try {
+        const res = await fetch(`${location.origin}/api/auth/validateToken`,
+            {
+                method: 'GET',
+                headers: {
+                    'x-token': token,
+                    'Content-Type': 'application/json'
+                }
+            });
+        const { validate } = await res.json();
+        if (validate) {
+          console.log($contentLogged,"-----")
+        }else{
+          
+        }
+          
+    } catch (error) {
+        console.error(error)
+    }
+    });
+      const sessionQuestion = async()=>{
+        try {
+          const token = window.localStorage.getItem("x-token")
+            const res = await fetch(`${location.origin}/api/auth/validateToken`,
+                {
+                    method: 'GET',
+                    headers: {
+                        'x-token': token,
+                        'Content-Type': 'application/json'
+                    }
+                });
+            const { validate } = await res.json();
+            (validate) 
+            ? window.location.replace(`${location.origin}/paginas/inicio.html`)
+            : preguntarSesion()
+        } catch (error) {
+            //dejar pasar y entrar a login
+            console.error(error)
+        }
+      }
+    </script>
+  </body>
+</html>

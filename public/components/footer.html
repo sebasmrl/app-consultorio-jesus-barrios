@@ -1,0 +1,25 @@
+<footer
+  class="
+    w-full
+    flex flex-col
+    px-10
+    pt-5
+    pb-5
+    gap-5
+    justify-between
+    items-center
+    bg-gradient-to-tl
+    from-gray-900
+    via-purple-900
+    to-purple-800
+  "
+>
+  <img class="object-contain h-28" src="images/Logo - HD.png" alt="Logo" />
+  <div class="flex items-center gap-2 text-white">
+    <i class="material-icons-round"> copyright </i>
+    <p id="copyright"></p>
+  </div>
+</footer>
+<script defer>
+  document.getElementById('copyright').innerHTML = `Todos los derechos reservados - ${new Date().getFullYear()}`;
+</script>

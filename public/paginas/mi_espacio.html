@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html ng-app="ConsultorioVirtual" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultorio Virtual</title>
+    <!-- Links -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="../images/icono.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="../js/api.js"></script>
+    <script defer src="../js/miEspacio.js"></script>
+
+    <script defer src="../js/includeHtml.js"></script>
+    <script defer src="../components/loggedNavbar/loggedNavbar.js"></script>
+  </head>
+  <body class="w-screen h-screen overflow-hidden relative">
+    <!-- FAB -->
+    <button
+      id="saveButton"
+      class="fixed bottom-10 right-10 cursors-pointer z-50 p-4 bg-blue-500 rounded-full flex items-center justify-center transform transition-all hover:bg-blue-600"
+    >
+      <i class="material-icons-round text-white">save</i>
+    </button>
+
+    <!-- Decoracion 1-->
+    <div class="absolute -top-10 left-1/2 rounded-full w-80 h-80 bg-opacity-20 bg-purple-500 z-0"></div>
+
+    <!-- Decoracion 2-->
+    <div
+      class="absolute top-1/3 -right-48 rounded-full w-80 h-96 transform rotate-45 bg-opacity-10 bg-purple-500 z-0"
+    ></div>
+
+    <!-- Decoracion 3-->
+    <div
+      class="absolute -bottom-20 left-1/4 rounded-full w-80 h-52 transform rotate-12 bg-opacity-5 bg-purple-500 z-0"
+    ></div>
+
+    <div class="relative flex flex-col w-full h-full overflow-hidden">
+      <!-- Navbar -->
+      <include src="../components/loggedNavbar/loggedNavbar.html">Cargando Navbar...</include>
+
+      <!-- Body -->
+      <div class="p-10 md:p-20 flex-grow flex flex-col gap-12 overflow-hidden overflow-y-auto z-40 relative">
+        <!-- Datos Basicos -->
+        <div class="flex flex-col items-center md:items-start md:flex-row gap-7">
+          <img class="w-56 h-56 bg-gray-200 rounded-full object-cover" id="profile-pic" alt="profile-pic" />
+          <div class="flex flex-col gap-2 text-center md:text-left">
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Nombre:</label>
+              <input placeholder="Nombre" name="name" id="usName" />
+            </div>
+
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Correo:</label>
+              <input placeholder="Correo" name="email" id="usMail" />
+            </div>
+            <!-- <h1 id="usName" class="text-4xl font-light text-gray-800">Nombre</h1> -->
+            <!-- <h2 id="usMail" class="text-2xl font-light text-gray-800">Correo:</h2> -->
+            <h2 id="usRol" class="text-2xl font-light text-gray-800">Rol:</h2>
+          </div>
+        </div>
+
+        <!-- Datos Opcionales -->
+        <div class="flex flex-col md:flex-row justify-between gap-5 w-full">
+          <!-- Columna 1 -->
+          <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Telefono:</label>
+              <input placeholder="Telefono" name="phone" id="usTel" />
+            </div>
+
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Genero:</label>
+              <input placeholder="Genero" name="gen" id="usGen" />
+            </div>
+
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Estado Civil:</label>
+              <input placeholder="Estado Civil" name="estado" id="usEstado" />
+            </div>
+
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Seguridad Social:</label>
+              <input placeholder="Seguridad Social" name="seg" id="usSeg" />
+            </div>
+
+            <!-- <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Fecha de Nacimiento:</label>
+              <input placeholder="Fecha de Nacimiento" name="nacimiento" id="usFecha" type="date" />
+            </div> -->
+            <h2 id="usFecha" class="text-2xl font-light text-gray-800">Nacimiento:</h2>
+          </div>
+
+          <!-- Columna 2 -->
+          <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Carrera:</label>
+              <input placeholder="Carrera" name="carrera" id="usCar" />
+            </div>
+
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Semestre:</label>
+              <input placeholder="Semestre" name="semestre" id="usSem" type="number" />
+            </div>
+
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Ocupación:</label>
+              <input placeholder="Ocupación" name="ocup" id="usOcu" />
+            </div>
+
+            <div class="flex flex-col gap-1 mb-2">
+              <label class="text-xl font-light text-gray-800">Estudios:</label>
+              <input placeholder="Estudios" name="estud" id="usEstu" />
+            </div>
+            <!-- <h2 id="usCar" class="text-2xl font-light text-gray-800">Carrera:</h2> -->
+            <!-- <h2 id="usSem" class="text-2xl font-light text-gray-800">Semestre:</h2> -->
+            <!-- <h2 id="usOcu" class="text-2xl font-light text-gray-800">Ocupación:</h2> -->
+            <!-- <h2 id="usEstu" class="text-2xl font-light text-gray-800">Estudios:</h2> -->
+          </div>
+
+          <div></div>
+        </div>
+
+        <!-- Fecha -->
+        <div class="flex-grow"></div>
+        <h2 id="usDate" class="text-2xl text-gray-400 text-center md:text-left">Desde x</h2>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
