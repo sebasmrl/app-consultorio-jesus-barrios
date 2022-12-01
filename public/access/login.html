@@ -120,7 +120,7 @@
     <script>
         function handleCredentialResponse(response) {
           const token = response.credential;
-          fetch('http://localhost:3001/api/auth/google', 
+          fetch(`${location.protocol}//${location.host}/api/auth/google`, 
             {
                 method: 'POST',
                 headers: {
@@ -135,7 +135,7 @@
           }).then((json)=>{
             
             localStorage.setItem('x-token', json.token)
-            location.replace(`${location.origin}/paginas/inicio.html`)
+            location.replace(`${location.protocol}//${location.host}/paginas/inicio.html`)
           })
           .catch((error)=>{
             console.log(error)
@@ -148,7 +148,7 @@
         window.addEventListener("DOMContentLoaded", async (e) => {
             const token = window.localStorage.getItem("x-token")
             try {
-                const res = await fetch(`${location.origin}/api/auth/validateToken`,
+                const res = await fetch(`${location.protocol}//${location.host}/api/auth/validateToken`,
                     {
                         method: 'GET',
                         headers: {
@@ -158,7 +158,7 @@
                     });
                 const { validate } = await res.json();
                 if (validate) {
-                    window.location.replace(`${location.origin}/paginas/inicio.html`)
+                    window.location.replace(`${location.protocol}//${location.host}/paginas/inicio.html`)
                 }
             } catch (error) {
                 //dejar pasar y entrar a login
@@ -170,7 +170,7 @@
         //-----------------------------------------------------------------
         const login = async (data) => {
             const response = await (
-                await fetch(`${location.origin}/api/auth/login`, {
+                await fetch(`${location.protocol}//${location.host}/api/auth/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data),

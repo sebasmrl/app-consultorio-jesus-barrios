@@ -300,7 +300,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     const token = window.localStorage.getItem("x-token");
     const $contentLogged = document.getElementById("contentLogged");
     try {
-        const res = await fetch(`${location.origin}/api/auth/validateToken`,
+        const res = await fetch(`${location.protocol}//${location.host}/api/auth/validateToken`,
             {
                 method: 'GET',
                 headers: {
@@ -322,7 +322,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       const sessionQuestion = async()=>{
         try {
           const token = window.localStorage.getItem("x-token")
-            const res = await fetch(`${location.origin}/api/auth/validateToken`,
+            const res = await fetch(`${location.protocol}//${location.host}/api/auth/validateToken`,
                 {
                     method: 'GET',
                     headers: {
@@ -332,7 +332,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                 });
             const { validate } = await res.json();
             (validate) 
-            ? window.location.replace(`${location.origin}/paginas/inicio.html`)
+            ? window.location.replace(`${location.protocol}//${location.host}/paginas/inicio.html`)
             : preguntarSesion()
         } catch (error) {
             //dejar pasar y entrar a login

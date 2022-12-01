@@ -1,6 +1,6 @@
 // const url = 'http://site.curn.edu.co:8067/consultorio/api/';
 // const url = 'http://localhost:8080/api/';
-const url = `${location.origin}/api/`
+const url = `${location.protocol}//${location.host}/api/`
 //import { tok} from '../js/biblioteca'
 const token = localStorage.getItem('x-token');
 
